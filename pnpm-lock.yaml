@@ -28,7 +28,7 @@ importers:
         specifier: ^17.4.2
         version: 17.4.2(vue@3.5.41)(webpack@5.109.2)
       webpack:
-        specifier: ^5.103.0
+        specifier: ^5.109.2
         version: 5.109.2(postcss@8.5.26)(webpack-cli@6.0.1)
       webpack-cli:
         specifier: ^6.0.1

@@ -1,20 +1,24 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
-const props = defineProps({
-  variant: {
-    type: String,
-    default: 'primary',
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-});
+type Variant = 'primary' | 'secondary' | 'danger';
+
+const props = withDefaults(
+  defineProps<{
+    variant?: Variant;
+    disabled?: boolean;
+  }>(),
+  {
+    variant: 'primary',
+    disabled: false,
+  }
+);
 
 const clicks = ref(0);
 
-const colors = {
+// Indexed from the template, where the compiler widens the prop back to a
+// plain string, so the map is keyed by string rather than by Variant.
+const colors: Record<string, string> = {
   primary: '#007bff',
   secondary: '#6c757d',
   danger: '#dc3545',

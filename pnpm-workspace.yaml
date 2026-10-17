@@ -1,0 +1,4 @@
+# serve 14.2.6, the latest release, pins compression to exactly 1.8.1, which is
+# affected by GHSA-vc2v-76pw-4v95. Drop this override once serve allows >= 1.8.2.
+overrides:
+  compression: ^1.8.2

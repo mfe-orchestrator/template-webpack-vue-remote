@@ -6,7 +6,7 @@ marketplace as `webpack-remote-vue`. Webpack 5 + Vue 3, wired as a **remote**.
 ## Requirements
 
 - Node.js 22.15 or newer (CI builds on Node 24, the current LTS)
-- [pnpm](https://pnpm.io) 10 or newer
+- [pnpm](https://pnpm.io) 12 (pinned in `packageManager`; `corepack enable` picks it up)
 
 ## Getting started
 
